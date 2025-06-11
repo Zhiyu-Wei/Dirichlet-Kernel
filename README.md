@@ -29,8 +29,16 @@ install.packages(c("shiny", "DT", "ggplot2", "shinycssloaders", "MCMCpack", "for
 
 - **Tab 2: Ternary Plot**
   - Visualize smoothed response using Dirichlet kernel smoothing
-  - Adjust bandwidth (`h`) manually or via cross-validation
+  - Adjust bandwidth (`h`) manually or via cross-validation  
+    ⚠️ *Note: The cross-validation interval must be carefully chosen. The default range may not always work.*  
+    *If the app crashes or closes automatically, try expanding the interval range, as convergence may have failed.*
   - Customize color scale and display options
+  - 🎨 **Scale color low / high**: Set the gradient colors for the smoothed ternary plot (e.g., yellow → blue).
+  - 🏷 **Color bar title**: Customize the label shown on the color bar (e.g., "Predicted Y").
+  - 🖼 **Plot title**: Add a custom title to the ternary plot for display or export.
+  - 🧱 **Resolution slider**: Controls the grid density of smoothed values. Higher resolution = smoother but slower.
+  - 🔲 **Show boundary**: Toggle to display boundary lines based on observed data limits.
+
 
 - **Tab 3: Semi-parametric Estimation**
   - Run backfitting algorithm
