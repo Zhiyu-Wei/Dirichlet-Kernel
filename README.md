@@ -35,7 +35,7 @@ install.packages(c("shiny", "DT", "ggplot2", "shinycssloaders", "MCMCpack", "for
   - Customize color scale and display options
     🎨 *Scale color low / high: Set the gradient colors for the smoothed ternary plot (e.g., yellow → blue).*  
     🏷 *Color bar title: Customize the label shown on the color bar (e.g., "Predicted Y").*  
-    🖼 *Plot title**: Add a custom title to the ternary plot for display or export.*  
+    🖼 *Plot title: Add a custom title to the ternary plot for display or export.*  
     🧱 *Resolution slider: Controls the grid density of smoothed values. Higher resolution = smoother but slower.*  
     🔲 *Show boundary: Toggle to display boundary lines based on observed data limits.*  
 
