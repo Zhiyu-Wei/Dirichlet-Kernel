@@ -16,7 +16,7 @@ An interactive R Shiny application for semi-parametric analysis and visualizatio
 ```r
 # Required packages
 install.packages(c("shiny", "DT", "ggplot2", "shinycssloaders", "MCMCpack", "foreach", "doParallel"))
-
+```
 ![screenshot](1.png) 
 ![screenshot](2.png) 
 ![screenshot](3.jpg) 
