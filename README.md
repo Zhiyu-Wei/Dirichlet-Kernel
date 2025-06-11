@@ -4,4 +4,4 @@ An interactive R Shiny application for semi-parametric analysis and visualizatio
 
 ![screenshot](1.png) 
 ![screenshot](2.png) 
-![screenshot](3.png) 
+![screenshot](3.jpg) 
