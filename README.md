@@ -41,8 +41,12 @@ install.packages(c("shiny", "DT", "ggplot2", "shinycssloaders", "MCMCpack", "for
 
 
 - **Tab 3: Semi-parametric Estimation**
-  - Run backfitting algorithm
-  - Bootstrap inference for covariates
-  - Visualize residual nonparametric effects
+  - 🧮 Run backfitting algorithm: Decomposes the response into linear (covariate) and nonlinear (compositional) effects.
+  - 📊 Bootstrap inference for covariates: Resamples the dataset and estimates coefficient uncertainty via standard error and p-values.
+     ⚠️ *Bootstrap involves high computation; parallel processing is supported to reduce runtime.*
+     💡 *We recommend using at most half of your system's CPU cores. You can check your core count via `parallel::detectCores()` in R.*
+     🔁 *Tolerance: The stopping threshold for the iterative backfitting loop. Smaller values lead to more accurate convergence but longer runtime.*
+  - 🌊 Visualize residual nonparametric effects: The residual surface after removing linear covariate effects is visualized using Dirichlet kernel smoothing on the ternary plot.
+
 
 
