@@ -22,10 +22,9 @@ install.packages(c("shiny", "DT", "ggplot2", "shinycssloaders", "MCMCpack", "for
 ![screenshot](3.jpg) 
 
 - **Tab 1: Data Preparation**
-  - Upload CSV file or use built-in example data
-  <br>
-  - Select 3 compositional variables (must sum to 1)
-  - Choose covariates and response variable  
+  - Upload CSV file or use built-in example data  
+  - Select 3 compositional variables (must sum to 1)  
+  - Choose covariates and response variable    
     ⚠️ *Note: Currently, at least two covariates must be selected to ensure proper functioning of the app.*
 
 - **Tab 2: Ternary Plot**
