@@ -21,4 +21,20 @@ install.packages(c("shiny", "DT", "ggplot2", "shinycssloaders", "MCMCpack", "for
 ![screenshot](2.png) 
 ![screenshot](3.jpg) 
 
+## 📁 App Structure
+- **Tab 1: Data Preparation**
+  - Upload CSV file
+  - Select 3 compositional variables (must sum to 1)
+  - Choose covariates and response variable
+
+- **Tab 2: Ternary Plot**
+  - Visualize smoothed response using Dirichlet kernel smoothing
+  - Adjust bandwidth (`h`) manually or via cross-validation
+  - Customize color scale and display options
+
+- **Tab 3: Semi-parametric Estimation**
+  - Run backfitting algorithm
+  - Bootstrap inference for covariates
+  - Visualize residual nonparametric effects
+
 
