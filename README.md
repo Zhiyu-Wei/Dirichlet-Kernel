@@ -21,32 +21,33 @@ install.packages(c("shiny", "DT", "ggplot2", "shinycssloaders", "MCMCpack", "for
 ![screenshot](2.png) 
 ![screenshot](3.jpg) 
 
+## App Structure
+
 - **Tab 1: Data Preparation**
-  - Upload CSV file or use built-in example data  
-  - Select 3 compositional variables (must sum to 1)  
-  - Choose covariates and response variable    
-    ⚠️ *Note: Currently, at least two covariates must be selected to ensure proper functioning of the app.*
+  - Upload CSV file or use built-in example data.  
+  - Select three compositional variables (must sum to 1).  
+  - Choose covariates and response variable.  
+    *Note: Currently, at least two covariates must be selected to ensure proper functioning of the app.*
 
 - **Tab 2: Ternary Plot**
-  - Visualize smoothed response using Dirichlet kernel smoothing
-  - Adjust bandwidth (`h`) manually or via cross-validation  
-    ⚠️ *Note: The cross-validation interval must be carefully chosen. The default range may not always work.*  
-    *If the app crashes or closes automatically, try expanding the interval range, as convergence may have failed.*
-  - Customize color scale and display options
-    🎨 *Scale color low / high: Set the gradient colors for the smoothed ternary plot (e.g., yellow → blue).*  
-    🏷 *Color bar title: Customize the label shown on the color bar (e.g., "Predicted Y").*  
-    🖼 *Plot title: Add a custom title to the ternary plot for display or export.*  
-    🧱 *Resolution slider: Controls the grid density of smoothed values. Higher resolution = smoother but slower.*  
-    🔲 *Show boundary: Toggle to display boundary lines based on observed data limits.*  
-
+  - Visualize the smoothed response surface using Dirichlet kernel smoothing.
+  - Adjust the smoothing bandwidth (`h`) manually or via cross-validation.  
+    *Note: The cross-validation interval must be carefully chosen. The default range may not always be suitable.  
+    If the app closes unexpectedly, try expanding the interval range to improve convergence.*
+  - Customize the color scale and display options:  
+    - **Scale color low / high**: Define the gradient colors for the ternary plot (e.g., yellow to blue).  
+    - **Color bar title**: Specify the label for the color scale.  
+    - **Plot title**: Set a custom title for the plot.  
+    - **Resolution slider**: Control the grid density; higher resolution provides a smoother plot but increases computation time.  
+    - **Show boundary**: Optionally display boundaries based on the observed data range.
 
 - **Tab 3: Semi-parametric Estimation**
-  - 🧮 Run backfitting algorithm: Decomposes the response into linear (covariate) and nonlinear (compositional) effects.
-  - 📊 Bootstrap inference for covariates: Resamples the dataset and estimates coefficient uncertainty via standard error and p-values.
-     ⚠️ *Bootstrap involves high computation; parallel processing is supported to reduce runtime.*
-     💡 *We recommend using at most half of your system's CPU cores. You can check your core count via `parallel::detectCores()` in R.*
-     🔁 *Tolerance: The stopping threshold for the iterative backfitting loop. Smaller values lead to more accurate convergence but longer runtime.*
-  - 🌊 Visualize residual nonparametric effects: The residual surface after removing linear covariate effects is visualized using Dirichlet kernel smoothing on the ternary plot.
-
+  - Run the backfitting algorithm to separate linear covariate effects and nonlinear compositional effects.
+  - Perform bootstrap inference for covariates to obtain standard errors and p-values.  
+    *Note: Bootstrap is computationally intensive. Parallel processing is supported to reduce execution time.  
+    It is recommended to use no more than half of the available CPU cores. You may check your core count using `parallel::detectCores()` in R.*
+  - Set the **tolerance** parameter to control convergence in backfitting.  
+    Smaller values result in more accurate estimates but require longer computation.
+  - Visualize the residual surface after removing linear effects using Dirichlet kernel smoothing on the ternary plot.
 
 
