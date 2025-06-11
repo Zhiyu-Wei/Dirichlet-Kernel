@@ -23,7 +23,7 @@ install.packages(c("shiny", "DT", "ggplot2", "shinycssloaders", "MCMCpack", "for
 
 ## 📁 App Structure
 - **Tab 1: Data Preparation**
-  - Upload CSV file
+  - Upload CSV file or use build-in example data
   - Select 3 compositional variables (must sum to 1)
   - Choose covariates and response variable
 
